@@ -1,0 +1,27 @@
+{
+  "name": "phorejs",
+  "version": "0.0.1",
+  "description": "Phore JS Library",
+  "main": "./distribution/index.js",
+  "scripts": {
+    "clean": "npm cache clean --force",
+    "build": "babel source --presets babel-preset-es2015 --out-dir distribution",
+    "prepublish": "npm run build",
+    "test": "mocha -R spec --require babel-register --recursive"
+  },
+  "author": "Thiago Kroger",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "chai": "^3.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "mocha": "^5.1.0"
+  }
+}
